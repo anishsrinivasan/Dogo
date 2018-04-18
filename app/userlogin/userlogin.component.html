@@ -1,0 +1,52 @@
+<div class="container-fluid userlogincomponent">
+  <div class="row">
+    <div class="col-md-6 splashscreen text-center">
+
+      <img style="width:50px" class="splashscreenlogo" src="/assets/logo.png">
+      <h2><strong>Dogo!</strong></h2>
+      <hr>
+      <h4>Donate on the go! </h4>
+    </div>
+    <div class="col-md-6 logininputbox">
+      <div class="createuser" *ngIf="loginuserpage">
+        <h4> Login</h4>
+        <br>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" type="text" [(ngModel)]="email" value="">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" type="password" [(ngModel)]="password" value="">
+        </mat-form-field>
+        <br>
+        <br>
+        <button mat-raised-button color="primary" (click)="loginUser()">Login</button>
+        <button mat-raised-button color="primary" (click)="changeLoginPage()">Sign Up</button>
+
+      </div>
+
+      <div class="createuser" *ngIf="!loginuserpage">
+        <h4>Create an Account</h4>
+        <br>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Name" type="text" [(ngModel)]="name" value="">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" type="text" [(ngModel)]="email" value="">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" type="password" [(ngModel)]="password" value="">
+        </mat-form-field>
+        <br>
+        <br>
+        <button mat-raised-button color="primary" (click)="createUser()">Create</button>
+        <button mat-raised-button color="primary" (click)="changeLoginPage()">Login</button>
+
+
+      </div>
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="container-fluid userdashboardcomponent">
+    <div class="row">
+        <div class="col-md-3 usersidebar text-center">
+                <img style="width:50px;" class="splashscreenlogo" src="/assets/logo.png">
+                <h2><strong>Dogo!</strong></h2>
+                <br>
+              Hello,  <strong>{{name}}</strong>
+              <br>
+              Hope you're doing good!
+              <br>
+              {{email}}
+              <br>
+              <br>
+              <button mat-raised-button color="warn" style="background-color: #2c3e50" (click)="userLogout()">Log Out!</button>
+
+        </div>
+        <div class="col-md-9 userdashboard">
+            <h4 class="text-center">Enter Donation Details</h4>
+                    <br>
+                    <div>
+                    <h3 style="padding:0">Male</h3>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Kids" type="text" [(ngModel)]="kids_male" value="">
+                      </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Adults" type="text" [(ngModel)]="adults_male" value="">
+                      </mat-form-field>
+                      <br>
+                      <h3 style="padding:0">Female</h3>
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Kids" type="text" [(ngModel)]="kids_female" value="">
+                      </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Adults" type="text" [(ngModel)]="adults_female" value="">
+                      </mat-form-field>
+                      <br> 
+                      <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+                      <br>
+                    </div>
+                     <br>
+                     <div *ngFor="let bloodneeditem of bloodneedlistarray">
+                         <mat-card> 
+                             <p style="text-align:right">{{bloodneeditem.timestamp | date:'fullDate'}}</p>
+                            <h4>Male</h4>
+                            Kids - {{bloodneeditem.kids_male}}
+                            Adults - {{bloodneeditem.adults_male}}
+                            <br><hr>
+                            <h4>Female</h4>
+                            Kids - {{bloodneeditem.kids_female}}
+                            Adults - {{bloodneeditem.adults_female}}
+
+                            <br>
+                        </mat-card>
+                        <br><br>
+                        </div>
+                        <br><br>
+        </div>
+    </div>
+</div>
+
+
+

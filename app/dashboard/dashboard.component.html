@@ -1,0 +1,28 @@
+<div class="container-fluid dashboardcontainer">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-center">
+          <img style="width:50px;" class="splashscreenlogo" src="/assets/logo.png">
+          <h2><strong>Dogo! - Admin</strong></h2>
+      </div>
+
+  
+  <h3 class="text-center">Donors List</h3>
+  <br>
+  <div *ngFor="let bloodneeditem of bloodneedlist | async" class="col-md-12 " > 
+    <br><br>
+    <mat-card > 
+          <p style="text-align:right">{{bloodneeditem.data.timestamp | date:'fullDate'}}</p>
+          <h3><strong>{{bloodneeditem.data.name}}</strong></h3>
+         <h5>Male</h5>
+         Kids - {{bloodneeditem.data.kids_male}} |
+         Adults - {{bloodneeditem.data.adults_male}}
+         <br>
+         <h5>Female</h5>
+         Kids - {{bloodneeditem.data.kids_female}} | 
+         Adults - {{bloodneeditem.data.adults_female}}
+         <br>
+     </mat-card>
+     </div>
+     <br><br>
+</div></div></div>

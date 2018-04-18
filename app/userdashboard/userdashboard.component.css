@@ -1,0 +1,20 @@
+.usersidebar{
+    background-color: #f7f7f7;
+    padding:5%;
+
+}
+.userdashboardcomponent{
+    
+}
+
+.userdashboard {
+    padding:5%;
+    background-color: #ced6e0;
+  
+}
+
+agm-map {
+    padding-top:2em;
+    height: 200px;
+   
+  }

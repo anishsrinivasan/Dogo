@@ -1,0 +1,25 @@
+.logininputbox {
+    padding:10%;
+}
+.splashscreen{
+    padding:5%;
+    border-right-width: 1px;
+    border-right-color: white;
+    border-right-style: solid;
+}
+.mat-form-field{
+    width:100%;
+}
+.userlogincomponent{
+    background-color: #f7f7f7;
+    height:100vh;
+}
+
+@media only screen and (max-width:768px){
+    .splashscreen{
+    padding: 3%;
+    }
+    .splashscreenlogo {
+        width:100px;
+    }
+}
